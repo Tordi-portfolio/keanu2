@@ -1,0 +1,17 @@
+# Ignore database file
+db.sqlite3
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore environment file with secrets
+.env
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore Django migrations cache
+*/migrations/__pycache__/
+
+# Ignore local VS Code settings (if any)
+.vscode/

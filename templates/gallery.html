@@ -1,0 +1,127 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<style>
+  :root {
+    --accent-color: #ff3c00;
+  }
+
+  body {
+    background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+    color: #e8e8e8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .gallery-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .gallery-container h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.6);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .gallery-welcome {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.8;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.1);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .gallery-item {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 15px rgba(255, 60, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.03);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .gallery-item p {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: center;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery-container {
+      padding: 1.5rem;
+    }
+
+    .gallery-container h2 {
+      font-size: 2rem;
+    }
+
+    .gallery-welcome {
+      font-size: 1rem;
+    }
+
+    .gallery-item p {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
+<div class="gallery-container">
+  <h2>Photo Gallery</h2>
+
+  <p class="gallery-welcome">
+    Hey there, I’m Keanu Reeves, and I want to personally welcome you to this special part of my website — the official gallery. Life has been a wild, beautiful journey filled with unforgettable moments, incredible people, and experiences I never imagined possible. This space is where I get to share pieces of that journey with you, my fans and supporters, who have stood by me throughout the years.
+
+    Whether it’s behind-the-scenes snapshots from movie sets, candid moments from travels, red carpet appearances, or personal highlights, these images capture fragments of my life that mean a lot to me. Acting has always been more than a job — it’s been a way to connect, to tell stories that move people, and to remind ourselves that we’re all part of something bigger.
+
+    You’ve probably seen me in films like "The Matrix," "John Wick," or even way back in "Speed" and "Point Break." But beyond the movies, there’s a human side — moments of reflection, laughter, friendship, and quiet that often happen away from the spotlight. This gallery brings some of those memories to life, and I hope they resonate with you in some way.
+
+    I believe life is about connections — with our art, our passions, and with each other. If you’ve supported my work, cheered from afar, or simply appreciated the journey, this gallery is for you. It’s my way of saying thank you for being here, for being curious, and for sharing this ride with me. Enjoy exploring these photos, and remember — be kind, stay curious, and never stop chasing your dreams.
+  </p>
+
+  <div class="gallery-grid">
+    {% for image in images %}
+      <div class="gallery-item">
+        <img src="{{ image.image.url }}" alt="Gallery Image">
+        <p>{{ image.caption }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

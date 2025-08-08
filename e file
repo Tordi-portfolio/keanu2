@@ -1,0 +1,23 @@
+[33mcommit 1703cd232c26b2b7e693bf8c7863fc5d3dfa1944[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Tordi-portfolio <Techwithtordi@gmail.com>
+Date:   Fri Aug 8 05:42:15 2025 +0100
+
+    Add sensitive files to .gitignore
+
+[33mcommit d226b4712908cbefa0e06e67ad6be4696898fe74[m
+Author: Tordi-portfolio <Techwithtordi@gmail.com>
+Date:   Fri Aug 8 05:37:28 2025 +0100
+
+    Removed secrets from settings.py
+
+[33mcommit 862a236ef473cf079f15bf0098d84aed224dca9d[m
+Author: Tordi-portfolio <Techwithtordi@gmail.com>
+Date:   Thu Aug 7 23:28:38 2025 +0100
+
+    first commit
+
+[33mcommit 3d5e50107bd33fffef76650cc8dc2e64de61bc5d[m
+Author: Tordi-portfolio <Techwithtordi@gmail.com>
+Date:   Thu Aug 7 23:18:11 2025 +0100
+
+    h

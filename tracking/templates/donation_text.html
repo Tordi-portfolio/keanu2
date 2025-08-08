@@ -1,0 +1,323 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+
+  .donation-hero {
+    padding: 100px 20px 60px;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(255, 60, 0, 0.2), transparent);
+  }
+
+  .donation-hero h1 {
+    font-size: 52px;
+    font-weight: bold;
+    color: #ff3c00;
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.6);
+    margin-bottom: 20px;
+  }
+
+  .donation-hero p {
+    font-size: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    color: #ccc;
+    line-height: 1.7;
+  }
+
+  .section {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .section h2 {
+    font-size: 36px;
+    color: #ff3c00;
+    text-align: center;
+    margin-bottom: 45px;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.4);
+  }
+
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-row img {
+    border-radius: 14px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 25px rgba(255, 60, 0, 0.15);
+  }
+
+  .image-row p {
+    flex: 1;
+    min-width: 280px;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #ddd;
+    text-align: justify;
+  }
+
+  .tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .tier-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 6px solid #ff3c00;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 60, 0, 0.1);
+  }
+
+  .tier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(255, 60, 0, 0.3);
+  }
+
+  .tier-card h3 {
+    font-size: 24px;
+    color: #ff3c00;
+    margin-bottom: 10px;
+  }
+
+  .tier-card p {
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  .timeline {
+    margin-top: 40px;
+    border-left: 3px solid #ff3c00;
+    padding-left: 20px;
+  }
+
+  .timeline-entry {
+    margin-bottom: 35px;
+  }
+
+  .timeline-entry h4 {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 22px;
+  }
+
+  .timeline-entry small {
+    color: #aaa;
+    font-size: 15px;
+  }
+
+  .donate-cta {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .donate-btn {
+    display: inline-block;
+    background: #ff3c00;
+    color: #fff;
+    padding: 16px 34px;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 10px;
+    box-shadow: 0 0 12px rgba(255, 60, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .donate-btn:hover {
+    background: #e03600;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 60, 0, 0.6);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .stat-box {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 10px rgba(255, 60, 0, 0.1);
+  }
+
+  .stat-box h3 {
+    font-size: 40px;
+    color: #ff3c00;
+  }
+
+  .stat-box p {
+    font-size: 17px;
+    color: #ccc;
+  }
+
+  .faq {
+    margin-top: 60px;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .faq-item h4 {
+    margin-bottom: 10px;
+    color: #ff3c00;
+  }
+
+  .faq-item p {
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .donation-hero h1 {
+      font-size: 36px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+    }
+
+    .image-row {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="donation-hero">
+  <h1>Support Keanu Reeves’ Global Humanitarian Efforts</h1>
+  <p>
+    Keanu Reeves is known not only for his roles on screen, but for the quiet impact he has made off camera. Through years of anonymous giving, cancer research support, children’s hospital funding, and disaster relief, Keanu has quietly built a legacy of compassion. Your donation helps continue that mission — to heal, uplift, and protect the people and places that matter most.
+  </p>
+</div>
+
+<div class="section">
+  <h2>A Legacy of Compassion</h2>
+  <div class="image-row">
+    <div>
+      <img src="{% static 'image/keanu-kindness.jpeg' %}" alt="Keanu Kindness Moment">
+    </div>
+    <p>
+      While Hollywood sees a star, we see a soul — a man who has donated millions to cancer research in honor of his sister, supported children's hospitals without seeking praise, and walked miles just to make sure his fans felt seen. Keanu’s work has touched lives quietly, but profoundly. Now, with your help, we expand that impact.
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Milestones That Matter</h2>
+  <div class="timeline">
+    <div class="timeline-entry">
+      <h4>2020 – COVID Frontline Support</h4>
+      <small>Global</small>
+      <p>Partnered with relief groups to provide PPE, food packs, and morale support to hospital workers during the height of the pandemic.</p>
+    </div>
+    <div class="timeline-entry">
+      <h4>2021 – Pediatric Cancer Initiative</h4>
+      <small>USA & Canada</small>
+      <p>Funded new research and donated to children’s oncology hospitals anonymously. Dozens of treatments were made possible through his support.</p>
+    </div>
+    <div class="timeline-entry">
+      <h4>2022 – Homeless Outreach and Mental Wellness</h4>
+      <small>California</small>
+      <p>Led efforts to provide hot meals, hygiene kits, and trauma counseling to people living on the streets of Los Angeles.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Donation Tiers — Fuel the Mission</h2>
+  <div class="tiers">
+    <div class="tier-card">
+      <h3>$25 – A Moment of Light</h3>
+      <p>Help send books, art kits, and comfort items to young cancer patients.</p>
+    </div>
+    <div class="tier-card">
+      <h3>$50 – A Hot Meal, A Safe Night</h3>
+      <p>Provide food and emergency shelter to someone in crisis.</p>
+    </div>
+    <div class="tier-card">
+      <h3>$100 – Hope and Healing</h3>
+      <p>Support trauma therapy and mental health access for youth and survivors.</p>
+    </div>
+    <div class="tier-card">
+      <h3>$250 – The Next Chapter</h3>
+      <p>Fund scholarships, mentorships, and programs that help individuals rise from hardship into strength.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Impact By the Numbers</h2>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <h3>20+</h3>
+      <p>Projects Funded</p>
+    </div>
+    <div class="stat-box">
+      <h3>5K+</h3>
+      <p>Meals Provided</p>
+    </div>
+    <div class="stat-box">
+      <h3>3M+</h3>
+      <p>Dollars Quietly Donated</p>
+    </div>
+    <div class="stat-box">
+      <h3>Thousands</h3>
+      <p>Of Lives Touched</p>
+    </div>
+  </div>
+</div>
+
+<div class="section faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h4>Is this donation public?</h4>
+    <p>Only if you choose. You may donate anonymously or with a name and note of your choosing.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Is this connected directly to Keanu?</h4>
+    <p>All funds support the verified outreach initiatives that Keanu personally supports or funds. 100% transparency, no overhead cuts.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Can I donate regularly?</h4>
+    <p>Yes! You can choose to give monthly and be part of the “Everkind Circle” — supporters dedicated to ongoing change.</p>
+  </div>
+</div>
+
+<div class="section donate-cta">
+  <h2>Be Kind. Be Brave. Be a Light.</h2>
+  <p>
+    If Keanu’s story has ever inspired you, now is your chance to walk beside him — not on the red carpet, but on the road that changes lives. Let your kindness echo.
+  </p>
+  <a href="{% url 'donate_payment' %}" class="donate-btn">Make a Donation</a>
+  <a href="{% url 'donate' %}" class="donate-btn">Fill a Donation Form</a>
+</div>
+
+{% endblock %}

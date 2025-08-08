@@ -1,0 +1,224 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<div class="advanced-product-page">
+
+    <div class="advanced-product-card">
+
+        <div class="advanced-image-section">
+            <img src="{{ card.image.url }}" alt="{{ card.name }}" class="advanced-product-image">
+        </div>
+
+        <div class="advanced-info-section">
+            <h1 class="advanced-product-title">{{ card.name }}</h1>
+            <p class="advanced-product-type">Category: {{ card.card_type }}</p>
+
+            <div class="advanced-price-section">
+                <span class="price-badge">${{ card.price }}</span>
+            </div>
+
+            <p class="advanced-product-quantity">In Stock: {{ card.quantity }}</p>
+
+            <div class="advanced-product-description">
+                <h3>Description</h3>
+                <p>{{ card.description }}</p>
+            </div>
+
+            <a href="{% url 'fanscard_list' %}" class="advanced-back-button">← Back to Store</a>
+        </div>
+
+    </div>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'payment' %}" class="pay-link">💳 Make Payment</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="pay-link">🔒 Kindly Login To Access This Page</a>
+    {% endif %}
+
+</div>
+
+<style>
+body {
+    background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+    color: #e8e8e8;
+}
+
+.advanced-product-page {
+    max-width: 1100px;
+    margin: 50px auto;
+
+}
+
+.advanced-product-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(255, 60, 0, 0.15);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.advanced-product-card:hover {
+    box-shadow: 0 12px 35px rgba(255, 60, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.advanced-image-section {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.advanced-product-image {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    cursor: zoom-in;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 60, 0, 0.2);
+}
+
+.advanced-product-image:hover {
+    transform: scale(1.08);
+}
+
+.advanced-info-section {
+    flex: 1 1 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advanced-product-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color, #ff4c29);
+    text-shadow: 1px 1px 5px rgba(255, 60, 0, 0.5);
+}
+
+.advanced-product-type {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.advanced-price-section {
+    margin: 20px 0;
+}
+
+.price-badge {
+    font-size: 1.8rem;
+    color: #fff;
+    background: linear-gradient(135deg, #ff4c29, #c33200);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(255, 60, 0, 0.3);
+}
+
+.advanced-product-quantity {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.advanced-product-description h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.advanced-product-description p {
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.advanced-back-button {
+    margin-top: 20px;
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-color, #ff4c29);
+    border: 2px solid var(--accent-color, #ff4c29);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.advanced-back-button:hover {
+    background: var(--accent-color, #ff4c29);
+    color: #fff;
+}
+
+.pay-link {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--primary-color, #0d6efd);
+    color: #fff;
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    box-shadow: 0 4px 14px rgba(13, 110, 253, 0.4);
+}
+
+.pay-link:hover {
+    background: #0b5ed7;
+}
+
+/* Responsive for Tablets */
+@media (max-width: 992px) {
+    .advanced-product-card {
+        flex-direction: column;
+    }
+    .advanced-image-section, .advanced-info-section {
+        flex: 1 1 100%;
+    }
+    .advanced-product-image {
+        max-height: 350px;
+    }
+    .advanced-product-title {
+        font-size: 2.2rem;
+    }
+    .price-badge {
+        font-size: 1.6rem;
+    }
+}
+
+/* Responsive for Phones */
+@media (max-width: 576px) {
+    .advanced-product-page {
+        padding: 15px;
+    }
+    .advanced-product-image {
+        max-height: 250px;
+    }
+    .advanced-product-title {
+        font-size: 1.8rem;
+    }
+    .advanced-product-type,
+    .advanced-product-quantity,
+    .advanced-product-description p {
+        font-size: 0.95rem;
+    }
+    .price-badge {
+        font-size: 1.4rem;
+        padding: 8px 16px;
+    }
+    .advanced-info-section {
+        padding: 20px;
+    }
+}
+</style>
+{% endblock %}

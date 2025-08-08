@@ -1,0 +1,181 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<style>
+  :root {
+    --accent-color: #ff3c00;
+  }
+
+  body {
+    background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+    color: #e8e8e8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .movie-heading {
+    text-align: center;
+    margin: 2rem 1rem;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.6);
+  }
+
+  .movies-welcome {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+    color: #ccc;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.1);
+    backdrop-filter: blur(6px);
+  }
+
+  .movies-container {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.1);
+    backdrop-filter: blur(6px);
+  }
+
+  .movies-list {
+    list-style-type: decimal;
+    padding-left: 2rem;
+    margin: 0;
+  }
+
+  .movies-list li {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+    color: #eee;
+    line-height: 1.6;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .movie-heading {
+      font-size: 2rem;
+    }
+
+    .movies-welcome {
+      font-size: 1rem;
+      padding: 1.5rem;
+    }
+
+    .movies-container {
+      padding: 1.5rem;
+    }
+
+    .movies-list li {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .movie-heading {
+      font-size: 1.6rem;
+    }
+
+    .movies-welcome {
+      font-size: 0.95rem;
+    }
+
+    .movies-list li {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
+<h1 class="movie-heading">Complete Keanu Reeves Movie List</h1>
+
+<p class="movies-welcome">
+    Hey everyone, welcome to the official movie list page! I’m truly grateful that you’ve taken the time to visit and explore the body of work I’ve been fortunate to be part of over the years. Whether you’ve known me since the early days, or maybe you’ve just discovered my films recently, I want to say a huge thank you for your support, curiosity, and love for storytelling.
+
+    Acting has been one of the most incredible journeys of my life. From small indie projects to massive productions, every film has taught me something new and connected me with amazing people — both on and off the screen. Movies have a unique way of bringing us together, making us feel, reflect, and sometimes escape reality for a little while. And honestly, it means the world to me that some of these stories have resonated with you.
+
+    On this page, you’ll find a list of films I’ve worked on — some you probably know well, and others you might have missed. If you haven’t seen all of them yet, I hope you’ll take the time to dive in and enjoy the ride. Each movie represents a chapter of my journey — with action, drama, laughter, and the occasional wild adventure thrown in.
+
+    Your continued support motivates me to keep growing, exploring new characters, and telling stories that matter. So, thank you again for being here. Keep watching, keep dreaming, and never stop believing in the power of cinema.
+</p>
+
+<div class="movies-container">
+    <ul class="movies-list">
+        <li>One Step Away (1985)</li>
+        <li>Flying (1986)</li>
+        <li>River's Edge (1986)</li>
+        <li>Babes in Toyland (1986)</li>
+        <li>Act of Vengeance (1986)</li>
+        <li>Permanent Record (1988)</li>
+        <li>Dangerous Liaisons (1988)</li>
+        <li>Bill & Ted's Excellent Adventure (1989)</li>
+        <li>Parenthood (1989)</li>
+        <li>Tune in Tomorrow (1990)</li>
+        <li>Point Break (1991)</li>
+        <li>Bill & Ted's Bogus Journey (1991)</li>
+        <li>My Own Private Idaho (1991)</li>
+        <li>Bram Stoker's Dracula (1992)</li>
+        <li>Much Ado About Nothing (1993)</li>
+        <li>Even Cowgirls Get the Blues (1993)</li>
+        <li>Little Buddha (1993)</li>
+        <li>Speed (1994)</li>
+        <li>Johnny Mnemonic (1995)</li>
+        <li>A Walk in the Clouds (1995)</li>
+        <li>Chain Reaction (1996)</li>
+        <li>Feeling Minnesota (1996)</li>
+        <li>The Last Time I Committed Suicide (1997)</li>
+        <li>The Devil's Advocate (1997)</li>
+        <li>The Matrix (1999)</li>
+        <li>The Replacements (2000)</li>
+        <li>The Watcher (2000)</li>
+        <li>The Gift (2000)</li>
+        <li>Sweet November (2001)</li>
+        <li>Hardball (2001)</li>
+        <li>The Matrix Reloaded (2003)</li>
+        <li>The Matrix Revolutions (2003)</li>
+        <li>The Animatrix (2003)</li>
+        <li>Something's Gotta Give (2003)</li>
+        <li>Constantine (2005)</li>
+        <li>Thumbsucker (2005)</li>
+        <li>A Scanner Darkly (2006)</li>
+        <li>The Lake House (2006)</li>
+        <li>Street Kings (2008)</li>
+        <li>The Day the Earth Stood Still (2008)</li>
+        <li>The Private Lives of Pippa Lee (2008)</li>
+        <li>Henry's Crime (2010)</li>
+        <li>Generation Um... (2012)</li>
+        <li>Side by Side (2012)</li>
+        <li>Man of Tai Chi (2013)</li>
+        <li>47 Ronin (2013)</li>
+        <li>John Wick (2014)</li>
+        <li>Knock Knock (2015)</li>
+        <li>Exposed (2016)</li>
+        <li>The Neon Demon (2016)</li>
+        <li>The Whole Truth (2016)</li>
+        <li>The Bad Batch (2016)</li>
+        <li>To the Bone (2017)</li>
+        <li>John Wick: Chapter 2 (2017)</li>
+        <li>Siberia (2018)</li>
+        <li>Destination Wedding (2018)</li>
+        <li>Replicas (2018)</li>
+        <li>John Wick: Chapter 3 – Parabellum (2019)</li>
+        <li>Always Be My Maybe (2019)</li>
+        <li>Toy Story 4 (2019)</li>
+        <li>Bill & Ted Face the Music (2020)</li>
+        <li>The SpongeBob Movie: Sponge on the Run (2020)</li>
+        <li>The Matrix Resurrections (2021)</li>
+        <li>DC League of Super-Pets (2022)</li>
+        <li>John Wick: Chapter 4 (2023)</li>
+        <li>Sonic the Hedgehog 3 (2024, voice)</li>
+        <li>Ballerina (2025, upcoming)</li>
+        <li>Good Fortune (2025, upcoming)</li>
+    </ul>
+</div>
+{% endblock %}
