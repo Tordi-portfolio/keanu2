@@ -217,3 +217,6 @@ def moodley1(request):
 
 def members(request):
     return render(request, 'members.html')
+
+def sherry(request):
+    return render(request, 'fans/sherry.html')
