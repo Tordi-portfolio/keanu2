@@ -1,0 +1,172 @@
+{% extends "base3.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="rose-page-container">
+
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <button onclick="showLanguage('english')">English</button>
+    <button onclick="showLanguage('portuguese')">Português</button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="rose-hero">
+    <img src="{% static 'image/rose.png' %}" alt="Rose" class="rose-photo">
+    <h1 class="rose-title">Rose</h1>
+    <p class="rose-subtitle">A Timeless Presence in Keanu’s World</p>
+  </div>
+
+  <!-- Long-form Tribute Content -->
+  <div id="english" class="tribute-text active">
+    <div class="rose-content">
+      <p>
+      Rose, from the first moment you entered this story, your presence has been like sunlight gently breaking through clouds. Your essence is both delicate and strong—a combination that leaves an indelible mark on those fortunate enough to know you. Being Portuguese adds a melodic rhythm to your very being, a warmth and charm that is both vibrant and quietly profound.
+      </p>
+
+      <p>
+      In a world often filled with distractions, your attention to kindness, to empathy, to connection, is a rare and beautiful gift. Keanu often speaks of the way your presence brings calm, how your smile reassures, and how your laughter creates a melody that lingers in hearts. You have a way of making ordinary moments extraordinary, simply by being wholly yourself.
+      </p>
+
+      <p>
+      To describe your story is to describe the quiet courage you embody each day. The way you care, the way you nurture, the way you hold both love and respect in perfect balance—these are the qualities that define you. Your loyalty is unwavering; your presence, a constant light. Each action, each gesture, reflects the depth of your heart.
+      </p>
+
+      <p>
+      Life with you, Rose, is like walking through a garden in full bloom—every step reveals beauty, every breath fills the soul with warmth. Your Portuguese roots enrich your character, blending resilience with tenderness, and tradition with a modern sensibility that is rare and captivating.
+      </p>
+
+      <p>
+      Keanu often describes you as a muse, but not in the fleeting sense of inspiration that fades. You are a muse of permanence—a living testament to patience, devotion, and grace. Each moment shared with you, whether in conversation or in silence, is imbued with depth. Your presence transforms the ordinary into something extraordinary, something cinematic.
+      </p>
+
+      <p>
+      Through every challenge, every turning point, your strength shines quietly yet powerfully. You teach that love is not only shown in grand gestures, but in everyday choices: a listening ear, a tender smile, a comforting presence. These are the acts that truly define intimacy and connection.
+      </p>
+
+      <p>
+      The world may be chaotic, yet you remain a steady presence. Your laughter echoes like music, your wisdom settles like a gentle breeze, and your heart radiates warmth that draws people in. To be near you is to feel the comfort of safety, the reassurance that goodness exists.
+      </p>
+
+      <p>
+      Rose, this page is a tribute not just to who you are, but to the way you make life brighter for everyone around you. You are a reminder that love is both quiet and powerful, that true beauty lies in the sincerity of the heart, and that enduring connection is one of life’s most precious gifts.
+      </p>
+
+      <p class="font-semibold">With deep admiration,<br>Keanu Reeves</p>
+    </div>
+  </div>
+
+  <div id="portuguese" class="tribute-text">
+    <div class="rose-content">
+      <p>
+      Rose, desde o primeiro momento em que entrou nesta história, a sua presença foi como a luz do sol a romper suavemente as nuvens. A sua essência é delicada e ao mesmo tempo forte — uma combinação que deixa uma marca indelével em quem tem a sorte de a conhecer. Ser portuguesa acrescenta um ritmo melodioso ao seu ser, um calor e um charme que é vibrante e profundamente comovente.
+      </p>
+
+      <p>
+      Num mundo muitas vezes cheio de distrações, a sua atenção à bondade, à empatia, à conexão, é um dom raro e belo. Keanu fala muitas vezes de como a sua presença traz calma, como o seu sorriso transmite segurança e como a sua risada cria uma melodia que permanece no coração. Tem a capacidade de tornar momentos ordinários em extraordinários simplesmente por ser plenamente você.
+      </p>
+
+      <p>
+      Descrever a sua história é descrever a coragem silenciosa que encarna todos os dias. A forma como cuida, como nutre, como mantém o amor e o respeito em perfeito equilíbrio — estas são as qualidades que a definem. A sua lealdade é firme; a sua presença, uma luz constante. Cada ação, cada gesto, reflete a profundidade do seu coração.
+      </p>
+
+      <p>
+      A vida consigo, Rose, é como caminhar por um jardim em plena floração — cada passo revela beleza, cada respiração preenche a alma de calor. As suas raízes portuguesas enriquecem o seu caráter, combinando resiliência com ternura, e tradição com uma sensibilidade moderna rara e cativante.
+      </p>
+
+      <p>
+      Keanu descreve muitas vezes você como uma musa, mas não no sentido efémero da inspiração que desaparece. É uma musa de permanência — um testemunho vivo de paciência, devoção e graça. Cada momento partilhado consigo, seja numa conversa ou no silêncio, é cheio de profundidade. A sua presença transforma o ordinário em algo extraordinário, algo cinematográfico.
+      </p>
+
+      <p>
+      Em cada desafio, em cada ponto de viragem, a sua força brilha de forma silenciosa, mas poderosa. Ensina que o amor não se manifesta apenas em grandes gestos, mas nas escolhas do dia a dia: ouvir atentamente, sorrir com ternura, estar presente com conforto. Estes são os atos que verdadeiramente definem a intimidade e a conexão.
+      </p>
+
+      <p>
+      O mundo pode ser caótico, mas permanece uma presença constante. A sua risada ecoa como música, a sua sabedoria assenta como uma brisa suave, e o seu coração irradia calor que atrai as pessoas. Estar perto de si é sentir o conforto da segurança, a garantia de que a bondade existe.
+      </p>
+
+      <p>
+      Rose, esta página é uma homenagem não apenas a quem você é, mas à forma como torna a vida mais luminosa para todos ao seu redor. É um lembrete de que o amor é ao mesmo tempo silencioso e poderoso, que a verdadeira beleza reside na sinceridade do coração e que a conexão duradoura é um dos presentes mais preciosos da vida.
+      </p>
+
+      <p class="font-semibold">Com profunda admiração,<br>Keanu Reeves</p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.rose-page-container {
+  background-color: #000;
+  color: #f0f0f0;
+  font-family: 'Georgia', serif;
+  padding: 40px;
+  line-height: 1.7;
+}
+.rose-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.rose-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
+}
+.rose-title {
+  font-size: 42px;
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+}
+.rose-subtitle {
+  font-size: 20px;
+  font-style: italic;
+  color: #bbb;
+}
+.rose-content {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  text-align: justify;
+}
+.rose-content p {
+  margin-bottom: 25px;
+}
+.language-toggle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.language-toggle button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #444;
+  border: none;
+  color: white;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.language-toggle button:hover {
+  background: #666;
+}
+.tribute-text {
+  display: none;
+}
+.tribute-text.active {
+  display: block;
+}
+</style>
+
+<script>
+function showLanguage(lang) {
+  document.querySelectorAll('.tribute-text').forEach(el => el.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+}
+</script>
+
+{% endblock %}

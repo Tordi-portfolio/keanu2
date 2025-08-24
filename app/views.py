@@ -220,3 +220,9 @@ def members(request):
 
 def sherry(request):
     return render(request, 'fans/sherry.html')
+
+def rose(request):
+    return render(request, 'fans/rose.html')
+
+def concetta(request):
+    return render(request, 'fans/concetta.html')

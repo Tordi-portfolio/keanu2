@@ -1,0 +1,102 @@
+{% extends 'base3.html' %}
+{% load static %}
+
+{% block content %}
+<div class="kf-container">
+
+    <header class="kf-hero">
+        <h1 class="kf-title">Concetta Favazza — A Truly Kind Soul Worth Protecting</h1>
+        <p class="kf-subtitle">
+            This page exists to affirm, clearly and publicly, that Concetta Favazza is a genuinely kind and considerate person. 
+            We honor her goodness, celebrate her empathy, and stand against any attempts by imposters to misuse her name or take advantage of her trust.
+        </p>
+    </header>
+
+    <section class="kf-grid">
+        <!-- MAIN CONTENT -->
+        <article class="kf-card">
+            <div style="text-align:center; margin-bottom: 20px;">
+                {% if concetta_image %}
+                    <img src="{{ concetta_image.url }}" alt="Concetta Favazza" style="max-width: 300px; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,.5);">
+                {% else %}
+                    <img src="{% static 'image/concetta.jpg' %}" alt="Concetta Favazza" style="max-width: 300px; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,.5);">
+                {% endif %}
+            </div>
+
+            <h2 class="kf-h2">A Gentle Spirit in a Challenging World</h2>
+            <p>
+                In a world that often moves too quickly to notice quiet goodness, Concetta Favazza shines with the sort of warmth you feel even in a brief conversation. 
+                Her kindness is not performative; it is a steady habit of heart. She listens because she cares, helps because she can, and chooses empathy even when cynicism would be easier. 
+                People who meet her frequently describe an immediate sense of calm—an assurance that they are seen, heard, and valued. 
+                That rare simplicity is also a rare strength: it takes courage to be gentle in a harsh world.
+            </p>
+            <p>
+                Concetta’s thoughtfulness shows up in small details—checking in on friends, remembering what matters to them, offering comfort without making the moment about herself. 
+                She does not chase attention or applause; she prefers to lift others up quietly. 
+                Yet her impact is anything but small. Many who have crossed paths with her carry a piece of her kindness forward, 
+                becoming just a little more patient, a little more generous, because she modeled it for them.
+            </p>
+
+            <div class="kf-callout">
+                <strong>Our clear statement:</strong> Concetta Favazza is a good-hearted person who deserves respect, understanding, and protection from anyone attempting to impersonate her or misuse her trust.
+            </div>
+
+            <h2 class="kf-h2">Why She Deserves Protection</h2>
+            <p>
+                The very qualities that make someone like Concetta special—trust, openness, generosity—can also make them a target for those who act in bad faith. 
+                Imposters and scammers look for soft hearts to exploit. This page is, therefore, both a tribute and a shield: 
+                a definitive reference that rejects false claims, confronts deception, and affirms the truth of who she is.
+            </p>
+            <p>
+                We urge anyone who encounters suspicious messages, fake profiles, or questionable requests using her name to pause, verify, and report. 
+                Protecting a kind person is a community effort; it reflects our values as much as it safeguards hers. 
+                Let this page serve as a public commitment: we stand with Concetta, and we stand for honesty, dignity, and care.
+            </p>
+
+            <h2 class="kf-h2">Strength Behind the Softness</h2>
+            <p>
+                Do not mistake gentleness for weakness. True kindness is disciplined courage. 
+                It takes resilience to keep believing in goodness after being let down, to forgive without enabling harm, and to give without losing yourself. 
+                Concetta models that quiet strength: gracious but not gullible, open yet wise, warm and still wonderfully grounded. 
+                She chooses compassion not because she is naïve, but because she is brave.
+            </p>
+            <p>
+                Even when faced with negativity, she resists bitterness. Instead, she recommits to what matters—care, truth, and dignity. 
+                That posture does not just protect her heart; it also helps restore faith for the people around her. 
+                In a noisy world, this is a rare gift.
+            </p>
+
+            <h2 class="kf-h2">Our Promise to Concetta</h2>
+            <p>
+                Concetta, this space is for you and about you. It is a testament to your character—kind, empathetic, and steadfast. 
+                Your name will not be reduced to a rumor here, nor your heart to a target. 
+                We see you clearly and honor you openly. 
+                No imposter can steal what is true. No falsehood can erase what is real. 
+                And no malice can dim the light you bring to the people around you.
+            </p>
+        </article>
+
+        <!-- SIDE PANEL -->
+        <aside class="kf-card">
+            <h3 class="kf-h3">Protection Notice</h3>
+            <p class="kf-muted">
+                This is an official tribute and protection notice for Concetta Favazza within the Keanu website community.
+                Any suspicious activity or impersonation using her name should be reported immediately.
+            </p>
+
+            <div class="kf-callout kf-warning" style="margin-top:12px;">
+                <strong>Imposter Alert:</strong> Be cautious of unsolicited messages, requests for money, or accounts using similar names or photos. 
+                Always verify through trusted channels before responding.
+            </div>
+
+            <a class="kf-cta" href="">
+                Contact Support • Verify An Account →
+            </a>
+        </aside>
+    </section>
+
+    <footer class="kf-footer">
+        © {% now "Y" %} Keanu Website • Tribute to Kindness • All Rights Reserved
+    </footer>
+</div>
+{% endblock %}
