@@ -226,3 +226,6 @@ def rose(request):
 
 def concetta(request):
     return render(request, 'fans/concetta.html')
+
+def lynk(request):
+    return render(request, 'fans/lynk.html')
