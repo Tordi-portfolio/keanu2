@@ -229,3 +229,6 @@ def concetta(request):
 
 def lynk(request):
     return render(request, 'fans/lynk.html')
+
+def busa(request):
+    return render(request, 'fans/busa.html')
