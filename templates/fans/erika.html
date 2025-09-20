@@ -1,0 +1,151 @@
+{% extends 'base3.html' %}
+{% load static %}
+
+{% block content %}
+<div class="erika-body">
+
+  <style>
+    .erika-body {
+      background: linear-gradient(to bottom, #0b0b0c, #151515);
+      color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 60px 20px;
+    }
+
+    .erika-body .tribute-container {
+      background: rgba(255,255,255,0.03);
+      max-width: 920px;
+      margin: auto;
+      padding: 28px 30px;
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255, 160, 170, 0.04);
+    }
+
+    .erika-body h1 {
+      text-align: center;
+      font-size: 38px;
+      color: #ffbfd0;
+      margin-bottom: 14px;
+      font-weight: 700;
+      text-shadow: 0 2px 14px rgba(255,191,208,0.06);
+    }
+
+    .erika-body h2 {
+      text-align: center;
+      font-size: 16px;
+      color: #ffdfe6;
+      margin-top: 0;
+      margin-bottom: 22px;
+      font-weight: 400;
+    }
+
+    .erika-body p {
+      font-size: 17px;
+      line-height: 1.85;
+      margin-bottom: 20px;
+      color: #e6e6e6;
+    }
+
+    .erika-body .hero {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .erika-body .portrait {
+      width: 320px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,191,208,0.06);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+    }
+
+    .erika-body .portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .erika-body .quote {
+      margin: 18px 0;
+      padding: 14px 18px;
+      border-left: 4px solid #ff9fb1;
+      background: rgba(255,159,177,0.02);
+      font-style: italic;
+    }
+
+    .erika-body .support {
+      margin-top: 22px;
+      padding: 18px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+      border: 1px solid rgba(255,191,208,0.03);
+    }
+
+    .erika-body .small { font-size: 0.95rem; color: #dcdcdc; }
+
+    @media (max-width: 860px) {
+      .erika-body .hero { grid-template-columns: 1fr; }
+      .erika-body .portrait { width: 100%; max-width: 520px; margin: 0 auto; }
+    }
+  </style>
+
+  <div class="tribute-container" role="main" aria-labelledby="erika-title">
+    <h1 id="erika-title">Erika — A Gentle Light from Hungary</h1>
+    <h2>For Keanu: a tender portrait of a woman who gives love in the quietest, truest ways.</h2>
+
+    <div class="hero">
+      <div class="erika-text">
+        <p>
+          Erika comes from a place where seasons have stories and people speak softly as if words were delicate things to be handled with care. Born in Hungary, she carries in her a particular kind of warmth — not loud or insistent, but steady and dependable, like the glow of a lamp left on for a loved one’s return. Her hands remember kindness as naturally as they remember the taste of childhood plums; her voice holds the calm of long, patient afternoons.
+        </p>
+
+        <p>
+          To meet Erika is to feel seen. She notices small textures of life: the way someone folds their coat, the song that lingers in the corner of a room, the shy laugh that hides behind a nervous smile. She collects memories the way other people collect shells — carefully, tenderly; each one valued. For Keanu, these tiny attentions create a tapestry of safety and affection: shared coffee at dawn, notes left on the bedside table, a hand finding his in the dark as if there could be no greater compass.
+        </p>
+
+        <blockquote class="quote">"She loves quietly but fiercely — a presence that steadies and a heart that never runs out of room."</blockquote>
+
+        <p>
+          Recently, fate asked more of Erika than anyone imagined. An accident led her to a hospital bed, and in that space of white sheets and soft beeps, she revealed a courage that matched her gentleness. Where others might have been overwhelmed, Erika held an ordinary bravery. She accepted care with humility, joked where she could to ease the weight in the room, and offered gratitude for each small mercy: a nurse’s steady hand, a friend’s unexpected visit, the sunlight like a hush through the blinds.
+        </p>
+
+        <p>
+          Hospital days showed another side of her kindness: the way she reached outward even while recovering. She spoke words of comfort to fellow patients, offered a quiet laugh to a worried relative, and kept a careful list of the things she would do when she walked again: returning to the linden-lined streets of her hometown, bringing a basket of pastries to a neighbor, and learning a new poem by heart to read aloud at dusk. Those modest dreams were, for her, the most luminous kinds of hopes.
+        </p>
+
+        <p>
+          Erika’s love is practical and poetic. She nurtures through small rituals: the way she tends a plant until it thrives, the gentle reminders she sends when someone forgets to eat, the careful way she folds a blanket around shoulders that tremble. For Keanu, this means a love that is a soft but immovable force — the kind that anchors a day and makes ordinary moments feel like belonging.
+        </p>
+
+        <p>
+          There is bravery in being gentle, and Erika lives that truth every day. Her recovery has become a shared journey for those who love her — friends who bring flowers and stories, neighbors who offer quiet support, and Keanu, whose presence is both protective and tender. Together they have learned new rhythms: patient steps, slower mornings, and conversations that linger like good music. Each one of those steps is a promise: to keep walking side by side, to turn everyday tasks into acts of care, and to let love be the daily practice it deserves to be.
+        </p>
+
+        <div class="support">
+          <h3 class="small">How you can show support</h3>
+          <p class="small">A soft word, a short note, or a shared memory can mean more than grand gestures. If you’d like to leave a message for Erika or offer practical help during her recovery, there’s a space below the portrait to add your thoughts and prayers. Small offerings — warm meals, a ride to a follow-up appointment, or simply a listening ear — weave together into a support that heals.</p>
+        </div>
+
+        <p>
+          Erika’s story is a reminder that beauty often lives in the unshowy, everyday acts that stitch a life to others. She teaches us that patience is not passive, that tenderness is not fragile, and that courage can be as quiet as continuing to smile when things are hard. For Keanu, she is not only a partner but a companion whose presence turns the simplest gestures into lasting memories.
+        </p>
+
+        <p>
+          In the hush of evening, when the world softens and lights grow small, images of future walks along Hungarian lanes and quiet breakfasts are what sustain her. These are not extravagant plans, but they are pure and true: a book read together beneath a balcony, the careful exchange of warm coffee cups, and hands held through the small storms of life. Those are the things she treasures, and those are the promises she keeps.
+        </p>
+
+      </div>
+
+      <aside class="portrait" aria-label="Erika portrait">
+        <img src="{% static 'image/erika.jpg' %}" alt="Portrait of Erika, a kind and loving woman from Hungary">
+      </aside>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -232,3 +232,6 @@ def lynk(request):
 
 def busa(request):
     return render(request, 'fans/busa.html')
+
+def erika(request):
+    return render(request, 'fans/erika.html')
