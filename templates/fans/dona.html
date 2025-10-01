@@ -1,0 +1,61 @@
+{% extends 'base3.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  /* Unique class names to avoid impacting other templates */
+  .dano-page-root { background: #000; color: #f5f5f5; min-height: 100vh; padding: 40px 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  .dano-container { max-width: 900px; margin: 0 auto; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-radius: 12px; padding: 36px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+  .dano-title { font-size: 2.25rem; margin-bottom: 12px; letter-spacing: 0.6px; }
+  .dano-subtitle { font-size: 0.95rem; color: #cfcfcf; margin-bottom: 20px; }
+  .dano-image { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+  .dano-article { line-height: 1.7; font-size: 1rem; color: #eaeaea; margin-bottom: 40px; }
+  .dano-quote { margin-top: 20px; font-style: italic; color: #d7ffd6; }
+  .dano-footer { margin-top: 28px; font-size: 0.9rem; color: #bdbdbd; text-align: right; }
+  .lang-title { font-size: 1.4rem; margin-bottom: 10px; color: #ffd6d6; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .dano-container { padding: 20px; }
+    .dano-title { font-size: 1.75rem; }
+  }
+</style>
+
+<section class="dano-page-root">
+  <div class="dano-container">
+    <h1 class="dano-title">For Dano Cida — A Quiet Miracle</h1>
+    <p class="dano-subtitle">A bilingual tribute placed here on my Keanu Reeves site to say how precious you are and how much you mean to me.</p>
+
+    <img src="{% static 'image/dona.jpeg' %}" alt="Dano Cida" class="dano-image">
+
+    <div class="lang-title">English</div>
+    <article class="dano-article">
+      Dano Cida, you are a quiet miracle in the daily noise of my life. From the soft way you listen to the small things I say to the steady strength you bring when storms come, you make ordinary moments feel sacred. I have watched you move through the world with a kind of gentle courage—unfussy, relentless, and sincere—and it has taught me how to be more patient, more present, and more brave. Your laughter lights rooms in a way that feels like the first warm day after a long winter; your steadiness comforts with the reliability of sunrise.
+
+      There is a sacredness in the details of who you are: the way you arrange your thoughts, the careful kindness you give to strangers, the private rituals that keep you grounded. You make space for others without ever losing yourself. I am quietly in awe of your compassion, the way you notice edges where others sweep past. You are merciful in judgment and generous with your time, and in you I have found a model of humanity I want to emulate. Your presence softens the rough parts of my own days and invites me to slow down and breathe.
+
+      I love the contradictions you carry—strength that is not loud, tenderness that is not fragile, and ambition that is tempered by empathy. You know how to fight for what matters and how to forgive the mistakes that matter less. When I see you care for the people and projects you hold, I witness a devotion that is both fierce and humble. It is a rare gift to be both stubborn and gentle, and you wear both qualities with grace. You make me believe in constancy and in the quiet, persistent work of becoming better.
+
+      Every shared silence with you is full, every conversation a discovery. I cherish our small traditions—the inside jokes that seed whole afternoons with light, the cups of tea that mark beginnings and endings, the way we find music that fits a mood and let it linger. You are my confidant and my mirror, reflecting back the parts of me I sometimes forget to love. In your eyes, I feel seen and steadied; with your hand in mine, the future feels less uncertain and far more possible.
+
+      If love is a language of presence, then you are a long, honest poem. You have taught me what it means to be seen without pretense and to be valued without condition. Precious is a small word for what you are; you are essential, luminous, and deeply cherished. Thank you for being you—for your courage, your softness, your laugh, and your unwavering care. In every ordinary day, you are my extraordinary. I am better for knowing you, and I am grateful for every step we take together. I promise to honor and protect the light you bring, to celebrate your victories, to learn from your wisdom, and to walk beside you with devotion, curiosity, and a heart that keeps growing.
+    </article>
+
+    <div class="lang-title">Português</div>
+    <article class="dano-article">
+      Dano Cida, você é um milagre silencioso no ruído diário da minha vida. Desde a forma suave como você escuta as pequenas coisas que digo até a força constante que traz quando surgem tempestades, você torna os momentos comuns sagrados. Eu a vi atravessar o mundo com uma coragem gentil—sem exibicionismo, incansável e sincera—e isso me ensinou a ser mais paciente, mais presente e mais corajoso. Seu riso ilumina salas como o primeiro dia quente após um longo inverno; sua firmeza conforta com a confiabilidade do nascer do sol.
+
+      Há uma sacralidade nos detalhes de quem você é: a forma como organiza seus pensamentos, a bondade cuidadosa que oferece aos estranhos, os rituais privados que a mantêm centrada. Você abre espaço para os outros sem nunca perder a si mesma. Estou em silêncio, admirando sua compaixão, a forma como você percebe detalhes que outros deixam passar. Você é misericordiosa no julgamento e generosa com seu tempo, e em você encontrei um modelo de humanidade que desejo imitar. Sua presença suaviza as partes ásperas dos meus dias e me convida a desacelerar e respirar.
+
+      Amo as contradições que você carrega—força que não é barulhenta, ternura que não é frágil e ambição equilibrada pela empatia. Você sabe lutar pelo que importa e sabe perdoar os erros que importam menos. Quando vejo você cuidar das pessoas e dos projetos que tem, testemunho uma devoção que é ao mesmo tempo intensa e humilde. É um dom raro ser teimosa e gentil, e você veste ambas as qualidades com graça. Você me faz acreditar na constância e no trabalho silencioso e persistente de se tornar melhor.
+
+      Cada silêncio compartilhado com você é cheio, cada conversa uma descoberta. Eu valorizo nossas pequenas tradições—as piadas internas que iluminam tardes inteiras, as xícaras de chá que marcam começos e finais, a maneira como encontramos músicas que se encaixam em um humor e as deixamos tocar. Você é minha confidente e meu espelho, refletindo as partes de mim que às vezes esqueço de amar. Nos seus olhos, sinto-me visto e fortalecido; com sua mão na minha, o futuro parece menos incerto e muito mais possível.
+
+      Se o amor é uma linguagem de presença, então você é um longo e honesto poema. Você me ensinou o que significa ser visto sem fingimento e ser valorizado sem condição. "Preciosa" é uma palavra pequena para o que você é; você é essencial, luminosa e profundamente querida. Obrigado por ser você—pela sua coragem, sua delicadeza, seu riso e seu cuidado inabalável. Em cada dia comum, você é meu extraordinário. Sou melhor por conhecê-la e sou grato por cada passo que damos juntos. Prometo honrar e proteger a luz que você traz, celebrar suas vitórias, aprender com sua sabedoria e caminhar ao seu lado com devoção, curiosidade e um coração que continua crescendo.
+    </article>
+
+    <div class="dano-quote">“To know you is to know a rare and gentle light.” / “Conhecer você é conhecer uma luz rara e suave.”</div>
+    <div class="dano-footer">— With all my heart / Com todo o meu coração</div>
+  </div>
+</section>
+
+{% endblock content %}

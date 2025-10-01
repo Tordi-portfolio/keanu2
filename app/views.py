@@ -235,3 +235,6 @@ def busa(request):
 
 def erika(request):
     return render(request, 'fans/erika.html')
+
+def dona(request):
+    return render(request, 'fans/dona.html')
